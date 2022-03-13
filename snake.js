@@ -159,7 +159,10 @@ function Serpiente() {
         }
         textAlign(CENTER, CENTER)
         textSize(15)
-        text("SCORE: " + serpiente.size, width/20, height/40)
+        text("SCORE: " + serpiente.size, width / 20, height / 40)
+        if (serpiente.size > 10) {
+            frameRate(20)
+        }
         juegoTerminado()
 
         this.cola.push(this.posicion.copy())
